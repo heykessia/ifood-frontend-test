@@ -3,11 +3,9 @@ import { Navbar, Title } from './styled';
 
 const Header = () => {
   return (
-    <div>
-      <Navbar>
-        <Title>Spotifood</Title>
-      </Navbar>
-    </div>
+    <Navbar>
+      <Title>Spotifood</Title>
+    </Navbar>
   );
 }
 
