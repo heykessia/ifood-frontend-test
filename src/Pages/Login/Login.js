@@ -1,9 +1,13 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
+import { Container } from './styled';
 
 const Login = () => {
   return (
-    <Header />
+    <div>
+      <Header />
+      YOU ARE IN LOGIN PAGE
+    </div>
   );
 }
 
