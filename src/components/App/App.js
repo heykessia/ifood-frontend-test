@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { StylesProvider } from '@material-ui/core/styles';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../../utils/theme';
+import { theme } from '../../assets/theme/theme';
 
 import { AuthProvider } from '../../contexts/auth-context';
 import Router from '../../router/Router';
@@ -10,11 +10,11 @@ import Router from '../../router/Router';
 const App = () => {
   return (
     <AuthProvider>
-       <MuiThemeProvider theme={theme}>
-          <ThemeProvider theme={theme}>
-            <Router />
-          </ThemeProvider>
-        </MuiThemeProvider>
+      <StylesProvider injectFirst>
+       <ThemeProvider theme={theme}>
+          <Router />
+        </ThemeProvider>
+        </StylesProvider>
     </AuthProvider>
   );
 }

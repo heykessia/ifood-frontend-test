@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Title } from './styled';
+import { Navbar, Title } from './styles';
 
 const Header = () => {
   return (

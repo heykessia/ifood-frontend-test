@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { ThemeProvider } from 'styled-components';
-import { theme } from './theme'
+import { theme } from '../assets/theme/theme'
 
 const AllTheProviders = ({ children }) => {
   return (

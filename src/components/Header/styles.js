@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import AppBar from '@material-ui/core/AppBar';
-import { Typography } from "@material-ui/core";
+import { Typography, AppBar } from "@material-ui/core";
 
-export const Navbar = styled(AppBar)`
+export const Navbar = styled(AppBar).attrs({
+  position: 'relative'
+})`
   ${({ theme }) => `
     padding: ${theme.spacing(2)}px;
-    background-color: ${theme.pallete.primaryRed};
+    background-color: ${theme.pallete.primary.main};
   `}
 `;
 
