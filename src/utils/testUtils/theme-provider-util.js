@@ -1,16 +1,19 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { StylesProvider } from '@material-ui/core/styles';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../assets/theme/theme'
+import { AuthProvider } from '../../contexts/auth-context';
+import { theme } from '../../assets/theme/theme'
 
 const AllTheProviders = ({ children }) => {
   return (
-    <MuiThemeProvider theme={theme}>
-      <ThemeProvider theme={theme}>
-        {children}
-      </ThemeProvider>
-    </MuiThemeProvider>
+    <AuthProvider>
+      <StylesProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          {children}
+        </ThemeProvider>
+      </StylesProvider>
+    </AuthProvider>
   )
 }
 

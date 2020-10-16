@@ -9,5 +9,5 @@ export const parseAuthParams = () => {
 }
 
 export const validAuth = (auth) => {
-  return auth.accessToken && auth.tokenType && auth.expiresIn
+  return Object.values(auth).some(authValue => authValue != null);
 }

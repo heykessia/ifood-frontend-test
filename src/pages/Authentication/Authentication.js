@@ -12,8 +12,7 @@ const Login = () => {
 
   useEffect(() => {
     const authParams = parseAuthParams();
-
-    if (!validAuth(authParams)) history.push('/error')
+    if (!validAuth(authParams)) return history.push('/login')
 
     setAuth(authParams);
     history.push('/');

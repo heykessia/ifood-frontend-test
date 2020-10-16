@@ -4,7 +4,7 @@ import { LoadingCircle, Container } from './styles';
 const Loading = () => {
   return (
     <Container>
-      <LoadingCircle />
+      <LoadingCircle data-testid='loading-circle' />
     </Container>
   );
 }
