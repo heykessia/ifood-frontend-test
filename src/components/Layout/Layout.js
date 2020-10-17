@@ -10,8 +10,8 @@ const Layout = ({children}) => {
       <main>
         <Container>
           <Brand />
-          {children}
         </Container>
+          {children}
       </main>
     </>
   )

@@ -4,9 +4,9 @@ import { getPlaylists } from '../services/spotify';
 export const PlaylistsContext = createContext({});
 
 const initialState = {
-  playlists: [],
+  playlists: null,
   loading: true,
-  error: null,
+  error: false,
 }
 
 function reducer(state = initialState, action) {

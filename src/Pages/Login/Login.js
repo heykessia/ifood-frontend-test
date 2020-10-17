@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 import Layout from '../../components/Layout/Layout';
 import Loading from '../../components/Loading/Loading';
-import { Message, LoginButton } from './styles';
+import { Message, LoginButton, Container } from './styles';
 
 const Login = () => {
   const { isAuthenticated, loading, setLoading } = useAuth();
@@ -21,10 +21,10 @@ const Login = () => {
   return (
     <Layout>
         { loading ? <Loading /> : 
-          <>
+          <Container>
             <Message>Welcome to Spotifood, please login to continue.</Message>
             <LoginButton onClick={handleLogin}>Login</LoginButton>
-          </>
+          </Container>
         }
     </Layout>
   );

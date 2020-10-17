@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../assets/theme/theme';
-import { Typography, Button } from '@material-ui/core/';
+import { Typography, Button, Container as MUContainer } from '@material-ui/core/';
 import { darken } from '@material-ui/core/styles';
 
 export const Message = styled(Typography).attrs({
@@ -19,3 +19,9 @@ ${({ theme }) => `
     background-color: ${darken(colors.red, 0.2)};
   }
 `}`;
+
+export const Container = styled(MUContainer).attrs({
+  maxWidth: 'sm'
+})`
+  text-align: center;
+`
