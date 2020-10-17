@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { colors } from '../../assets/theme/theme';
 import { Typography, Button, Container as MUContainer } from '@material-ui/core/';
 import { darken } from '@material-ui/core/styles';

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Typography, AppBar } from "@material-ui/core";
 
 export const Navbar = styled(AppBar).attrs({

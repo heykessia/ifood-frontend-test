@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { CircularProgress, Container as MUContainer } from "@material-ui/core";
 
 export const LoadingCircle = styled(CircularProgress).attrs({

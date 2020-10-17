@@ -6,7 +6,7 @@ const Playlist = (props) => {
   return (
     <Grid item xs={12} sm={6} md={4}>
        <Card>
-         <CardMedia image={props.playlist.images[0].url}/>
+         <CardMedia image={props.playlist.images[0].url} alt={props.playlist.name} />
        </Card>
     </Grid>
   )

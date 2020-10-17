@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { Container as MUContainer } from '@material-ui/core/';
 import Logo from '../../assets/images/ifood-logo.svg'
 
