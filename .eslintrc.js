@@ -5,20 +5,20 @@ module.exports = {
     jest: true
   },
   extends: [
-    'plugin:react/recommended',
-    'plugin:prettier/recommended'
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
   ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
-    sourceType: 'module',
+    ecmaVersion: 2018,
+    sourceType: "module",
   },
   plugins: [
-    'react',
-    'prettier',
-    'react-hooks'
+    "react",
+    "prettier",
+    "react-hooks"
   ],
   rules: {},
 };
