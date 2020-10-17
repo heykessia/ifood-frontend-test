@@ -12,7 +12,7 @@ const Input = ({ action, placeholder }) => {
   );
 };
 
-TextInput.propTypes = {
+Input.propTypes = {
   action: PropTypes.func,
   placeholder: PropTypes.string,
 };
