@@ -8,7 +8,9 @@ describe('Message component', () => {
     const action = jest.fn();
     const actionLabel = 'Action';
 
-    const { getByText } = render(<Message text={text} action={action} actionLabel={actionLabel}  />);
+    const { getByText } = render(
+      <Message text={text} action={action} actionLabel={actionLabel} />
+    );
     const textElement = getByText(text);
     const buttonElement = getByText(actionLabel);
 
@@ -21,11 +23,13 @@ describe('Message component', () => {
     const action = jest.fn();
     const actionLabel = 'Action';
 
-    const { getByText } = render(<Message text={text} action={action} actionLabel={actionLabel}  />);
+    const { getByText } = render(
+      <Message text={text} action={action} actionLabel={actionLabel} />
+    );
     const buttonElement = getByText(actionLabel);
 
     fireEvent.click(buttonElement);
 
     expect(action).toHaveBeenCalled();
   });
-})
+});

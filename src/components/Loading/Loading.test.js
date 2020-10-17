@@ -9,4 +9,4 @@ describe('Loading component', () => {
 
     expect(loadingElement).toBeInTheDocument();
   });
-})
+});

@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro';
-import { Typography, AppBar } from "@material-ui/core";
+import { Typography, AppBar } from '@material-ui/core';
 
 export const Navbar = styled(AppBar).attrs({
-  position: 'relative'
+  position: 'relative',
 })`
   ${({ theme }) => `
     padding: ${theme.spacing(2)}px;
@@ -12,5 +12,5 @@ export const Navbar = styled(AppBar).attrs({
 
 export const Title = styled(Typography).attrs({
   component: 'h5',
-  variant: 'h5'
+  variant: 'h5',
 })``;

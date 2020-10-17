@@ -7,6 +7,6 @@ const Header = () => {
       <Title>Spotifood</Title>
     </Navbar>
   );
-}
+};
 
 export default Header;

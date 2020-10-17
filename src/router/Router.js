@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Playlists from '../pages/Playlists/Playlists'
-import Login from '../pages/Login/Login'
-import ErrorPage from '../pages/ErrorPage/ErrorPage'
-import Authentication from '../pages/Authentication/Authentication'
+import Playlists from '../Pages/Playlists/Playlists';
+import Login from '../Pages/Login/Login';
+import ErrorPage from '../Pages/ErrorPage/ErrorPage';
+import Authentication from '../Pages/Authentication/Authentication';
 
 const Router = () => (
   <BrowserRouter>

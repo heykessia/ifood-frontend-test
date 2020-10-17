@@ -9,4 +9,4 @@ describe('Header component', () => {
 
     expect(headerElement).toBeInTheDocument();
   });
-})
+});

@@ -6,9 +6,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb',
-    'prettier',
-    'prettier/react'
+    'plugin:prettier/recommended'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -19,12 +17,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    'prettier'
+    'prettier',
+    'react-hooks'
   ],
-  rules: {
-    'prettier/prettier': 'error',
-    'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
-    'import/prefer-default-export': 'off',
-    'no-console': ['error', { allow: ['tron'] }]
-  },
+  rules: {},
 };

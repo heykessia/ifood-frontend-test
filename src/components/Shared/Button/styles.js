@@ -1,10 +1,10 @@
 import styled from 'styled-components/macro';
-import { colors } from '../../../assets/theme/theme';
 import { Button } from '@material-ui/core/';
 import { darken } from '@material-ui/core/styles';
+import { colors } from '../../../assets/theme/theme';
 
 export const PrymaryButton = styled(Button)`
-${({ theme }) => `
+  ${({ theme }) => `
   margin-top: 1rem;
   background-color: ${colors.red};
   color: #fff;
@@ -13,4 +13,5 @@ ${({ theme }) => `
   &:hover {
     background-color: ${darken(colors.red, 0.2)};
   }
-`}`;
+`}
+`;

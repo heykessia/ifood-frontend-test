@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import { Container, Brand } from './styles';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Header />
@@ -11,10 +12,14 @@ const Layout = ({children}) => {
         <Container>
           <Brand />
         </Container>
-          {children}
+        {children}
       </main>
     </>
-  )
-}
+  );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node,
+};
 
 export default Layout;

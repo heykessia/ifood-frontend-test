@@ -1,5 +1,8 @@
 import React from 'react';
-import { render, fireEvent } from '../../../utils/test-utils/theme-provider-util';
+import {
+  render,
+  fireEvent,
+} from '../../../utils/test-utils/theme-provider-util';
 import Button from './Button';
 
 describe('Button component', () => {
@@ -16,11 +19,13 @@ describe('Button component', () => {
     const label = 'Test';
     const handleClick = jest.fn();
 
-    const { getByText } = render(<Button onClick={handleClick} label={label} />);
+    const { getByText } = render(
+      <Button onClick={handleClick} label={label} />
+    );
     const buttonElement = getByText(label);
 
     fireEvent.click(buttonElement);
 
     expect(handleClick).toHaveBeenCalled();
   });
-})
+});

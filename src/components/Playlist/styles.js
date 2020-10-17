@@ -5,10 +5,10 @@ import {
   Grid as MUGrid,
   Card as MUCard,
   CardMedia as MUCardMedia,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
 export const Navbar = styled(AppBar).attrs({
-  position: 'relative'
+  position: 'relative',
 })`
   ${({ theme }) => `
     padding: ${theme.spacing(2)}px;

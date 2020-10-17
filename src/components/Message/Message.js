@@ -5,14 +5,14 @@ import Button from '../Shared/Button/Button';
 import Text from '../Shared/Text/Text';
 import { Container } from './styles';
 
-const Message = ({text, action, actionLabel}) => {
+const Message = ({ text, action, actionLabel }) => {
   return (
     <Container>
       <Text text={text} />
       <Button onClick={action} label={actionLabel} />
     </Container>
   );
-}
+};
 
 Message.propTypes = {
   action: PropTypes.func,

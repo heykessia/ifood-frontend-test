@@ -1,8 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-
 export const colors = {
-  red: '#ea1d2c'
+  red: '#ea1d2c',
 };
 
 export const theme = createMuiTheme({
