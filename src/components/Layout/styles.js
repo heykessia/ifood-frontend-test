@@ -9,7 +9,8 @@ export const Container = styled(MUContainer).attrs({
 `
 
 export const Brand = styled.img.attrs({
-  src: Logo
+  src: Logo,
+  alt: 'IFood Logo'
 })`
   max-height: 12rem;
 `

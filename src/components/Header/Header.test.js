@@ -5,7 +5,8 @@ import Header from './Header';
 describe('Header component', () => {
   test('renders title', () => {
     const { getByText } = render(<Header />);
-    const linkElement = getByText(/spotifood/i);
-    expect(linkElement).toBeInTheDocument();
+    const headerElement = getByText(/spotifood/i);
+
+    expect(headerElement).toBeInTheDocument();
   });
 })
