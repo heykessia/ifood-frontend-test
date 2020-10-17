@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 import { Typography } from "@material-ui/core";
 
-export const Message = styled(Typography).attrs({
+export const TextStyle = styled(Typography).attrs({
   component: 'p',
   variant: 'body1'
 })`

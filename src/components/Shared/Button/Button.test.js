@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '../../utils/test-utils/theme-provider-util';
+import { render, fireEvent } from '../../../utils/test-utils/theme-provider-util';
 import Button from './Button';
 
 describe('Button component', () => {

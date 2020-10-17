@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { colors } from '../../assets/theme/theme';
+import { colors } from '../../../assets/theme/theme';
 import { Button } from '@material-ui/core/';
 import { darken } from '@material-ui/core/styles';
 
