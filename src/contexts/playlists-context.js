@@ -52,7 +52,7 @@ export const fetchPlaylists = async (auth, dispatch) => {
       type: 'UPDATE_PLAYLISTS',
       payload: response.data.playlists.items,
     });
-  } catch {
+  } catch (error) {
     dispatch({ type: 'ERROR', payload: true });
   } finally {
     dispatch({ type: 'LOADING', payload: false });
