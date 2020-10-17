@@ -7,8 +7,6 @@ export const colors = {
 export const theme = createMuiTheme({
   spacing: [0, 4, 8, 16, 32, 64],
   pallete: {
-    primary: {
-      main: colors.red,
-    },
+    primary: colors.red,
   },
 });

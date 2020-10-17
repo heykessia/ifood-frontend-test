@@ -3,11 +3,11 @@ import {
   render,
   fireEvent,
 } from '../../../utils/test-utils/theme-provider-util';
-import Input from './Input';
+import SearchInput from './SearchInput';
 
 describe('Input component', () => {
   test('renders input', () => {
-    const { getByTestId } = render(<Input />);
+    const { getByTestId } = render(<SearchInput />);
     const inputElement = getByTestId('text-input');
 
     expect(inputElement).toBeInTheDocument();
@@ -19,7 +19,7 @@ describe('Input component', () => {
     const action = jest.fn();
 
     const { getByTestId, getByText } = render(
-      <Input action={action} placeholder={placeholder} />
+      <SearchInput action={action} placeholder={placeholder} />
     );
 
     const inputElement = getByTestId('text-input');

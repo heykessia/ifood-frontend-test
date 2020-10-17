@@ -6,7 +6,7 @@ export const Navbar = styled(AppBar).attrs({
 })`
   ${({ theme }) => `
     padding: ${theme.spacing(2)}px;
-    background-color: ${theme.pallete.primary.main};
+    background-color: ${theme.pallete.primary};
   `}
 `;
 

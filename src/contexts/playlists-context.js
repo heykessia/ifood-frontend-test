@@ -8,6 +8,7 @@ const initialState = {
   playlists: null,
   loading: true,
   error: false,
+  search: '',
 };
 
 function reducer(state = initialState, action) {
@@ -21,6 +22,9 @@ function reducer(state = initialState, action) {
     }
     case 'ERROR': {
       return { ...state, error: payload };
+    }
+    case 'UPDATE_SEARCH': {
+      return { ...state, search: payload };
     }
     default: {
       return state;
@@ -48,6 +52,7 @@ export const fetchPlaylists = async (auth, dispatch) => {
     dispatch({ type: 'LOADING', payload: true });
 
     const response = await getPlaylists(auth);
+
     dispatch({
       type: 'UPDATE_PLAYLISTS',
       payload: response.data.playlists.items,
@@ -57,4 +62,12 @@ export const fetchPlaylists = async (auth, dispatch) => {
   } finally {
     dispatch({ type: 'LOADING', payload: false });
   }
+};
+
+export const searchPlaylists = (playlists, searchTerm) => {
+  const term = searchTerm ? searchTerm.trim().toLowerCase() : '';
+
+  return playlists.filter(
+    (playlist) => playlist.name.toLowerCase().search(term) > -1
+  );
 };

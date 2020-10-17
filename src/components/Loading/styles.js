@@ -3,7 +3,7 @@ import { CircularProgress, Container as MUContainer } from '@material-ui/core';
 
 export const LoadingCircle = styled(CircularProgress).attrs({})`
   ${({ theme }) => `
-    color: ${theme.pallete.primary.main};
+    color: ${theme.pallete.primary};
   `}
 `;
 
