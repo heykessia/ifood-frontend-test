@@ -1,8 +1,25 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+
 import Layout from '../../components/Layout/Layout';
+import Message from '../../components/Message/Message';
 
 const ErrorPage = () => {
-  return <Layout>YOU ARE IN ERROR PAGE</Layout>;
+  const history = useHistory();
+
+  const goBack = () => {
+    history.push('/');
+  };
+
+  return (
+    <Layout>
+      <Message
+        text="Something went wrong, please go back to the home page."
+        action={goBack}
+        actionLabel="Back"
+      />
+    </Layout>
+  );
 };
 
 export default ErrorPage;
