@@ -6,10 +6,10 @@ import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <>
     <CssBaseline />
     <App />
-  </React.StrictMode>,
+  </>,
   document.getElementById('root')
 );
 

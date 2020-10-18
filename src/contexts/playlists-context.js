@@ -5,7 +5,7 @@ import { getPlaylists } from '../services/spotify';
 export const PlaylistsContext = createContext({});
 
 const initialState = {
-  playlists: null,
+  playlists: [],
   loading: true,
   error: false,
   search: '',
