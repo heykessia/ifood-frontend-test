@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Select, SelectOption, FormContainer, Label } from './styles';
-import { NONE } from '../../../utils/constants/constants';
 
 const SelectInput = ({ id, name, values, action, selected }) => {
   return (

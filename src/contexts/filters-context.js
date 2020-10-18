@@ -1,7 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import { getFilters } from '../services/filters';
-import { NONE } from '../utils/constants/constants';
 
 export const FiltersContext = createContext({});
 
