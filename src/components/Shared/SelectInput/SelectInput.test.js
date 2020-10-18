@@ -22,7 +22,7 @@ describe('Select Input component', () => {
       />
     );
     const labelElement = getByLabelText(filter.name);
-    const selectElement = getByText('None');
+    const selectElement = getByText('none');
 
     expect(labelElement).toBeInTheDocument();
     expect(selectElement).toBeInTheDocument();

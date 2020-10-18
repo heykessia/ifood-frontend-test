@@ -1,17 +1,18 @@
 import React, { createContext, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import { getFilters } from '../services/filters';
+import { NONE } from '../utils/constants/constants';
 
 export const FiltersContext = createContext({});
 
 const initialState = {
   filters: [],
   activeFilters: {
-    locale: 'none',
-    country: 'none',
+    locale: NONE,
+    country: NONE,
     timestamp: null,
-    limit: null,
-    offset: null,
+    limit: NONE,
+    offset: NONE,
   },
   loading: true,
   error: false,

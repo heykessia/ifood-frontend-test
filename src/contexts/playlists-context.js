@@ -1,6 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import { getPlaylists } from '../services/spotify';
+import { NONE } from '../utils/constants/constants';
 
 export const PlaylistsContext = createContext({});
 
@@ -46,12 +47,25 @@ PlaylistsProvider.propTypes = {
   children: PropTypes.node,
 };
 
-export const fetchPlaylists = async (auth, dispatch) => {
+export const filterParams = (activeFilters) => {
+  const params = {};
+
+  Object.keys(activeFilters).forEach((filter) => {
+    if (activeFilters[filter] !== NONE) {
+      params[filter] = activeFilters[filter];
+    }
+  });
+
+  return params;
+};
+
+export const fetchPlaylists = async (auth, dispatch, activeFilters) => {
   try {
     dispatch({ type: 'ERROR', payload: false });
     dispatch({ type: 'LOADING', payload: true });
-
-    const response = await getPlaylists(auth);
+    console.log('entrou no fetchPlaylists');
+    const params = filterParams(activeFilters);
+    const response = await getPlaylists(auth, params);
 
     dispatch({
       type: 'UPDATE_PLAYLISTS',

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Select, SelectOption, FormContainer, Label } from './styles';
+import { NONE } from '../../../utils/constants/constants';
 
 const SelectInput = ({ id, name, values, action, selected }) => {
   return (
@@ -16,7 +17,7 @@ const SelectInput = ({ id, name, values, action, selected }) => {
           })
         }
       >
-        <SelectOption value="none">None</SelectOption>;
+        <SelectOption value={NONE}>{NONE}</SelectOption>;
         {values &&
           values.map((option) => (
             <SelectOption key={option.value} value={option.value}>

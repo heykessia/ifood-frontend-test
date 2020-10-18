@@ -11,10 +11,11 @@ export const loginURL = () => {
   return `${REACT_APP_AUTH_URL}?client_id=${REACT_APP_CLIENT_ID}&redirect_uri=${REACT_APP_REDIRECT_URL}&response_type=token&show_dialog=true`;
 };
 
-export const getPlaylists = (auth) => {
+export const getPlaylists = (auth, params) => {
   const header = { Authorization: `${auth.tokenType} ${auth.accessToken}` };
 
   return axios.get(REACT_APP_FEATURED_URL, {
     headers: header,
+    params: params,
   });
 };

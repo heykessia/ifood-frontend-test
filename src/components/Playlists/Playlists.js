@@ -1,10 +1,8 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import {
   PlaylistsContext,
-  fetchPlaylists,
   searchPlaylists,
 } from '../../contexts/playlists-context';
-import { useAuth } from '../../contexts/auth-context';
 
 import Loading from '../../components/Loading/Loading';
 import Message from '../../components/Message/Message';
@@ -12,28 +10,16 @@ import Playlist from '../../components/Playlist/Playlist';
 import SearchInput from '../../components/Shared/SearchInput/SearchInput';
 import { Grid, Container } from './styles';
 
-const Playlists = () => {
-  const { state, dispatch } = useContext(PlaylistsContext);
-  const { auth } = useAuth();
+const Playlists = (reload, search) => {
+  const { state } = useContext(PlaylistsContext);
 
   const retry = () => {
-    return fetchPlaylists(auth, dispatch);
+    return reload();
   };
 
   const updateSearchTerm = (event) => {
-    dispatch({
-      type: 'UPDATE_SEARCH',
-      payload: event.target.value,
-    });
+    search(event.target.value);
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      fetchPlaylists(auth, dispatch);
-    }, 30000);
-
-    return () => clearInterval(interval);
-  }, [auth, dispatch]);
 
   return (
     <>
