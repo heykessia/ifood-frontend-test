@@ -2,11 +2,7 @@ import styled from 'styled-components/macro';
 import { colors } from '../../../assets/theme/theme';
 import { TextField, FormControl } from '@material-ui/core';
 
-export const DatePicker = styled(TextField).attrs({
-  InputLabelProps: {
-    shrink: true,
-  },
-})`
+export const DatePicker = styled(TextField)`
   ${({ theme }) => `
   && .MuiInputLabel-shrink {
     color: ${colors.gray};

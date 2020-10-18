@@ -2,11 +2,7 @@ import styled from 'styled-components/macro';
 import { colors } from '../../../assets/theme/theme';
 import { TextField, FormControl } from '@material-ui/core';
 
-export const TextInput = styled(TextField).attrs({
-  InputLabelProps: {
-    shrink: true,
-  },
-})`
+export const TextInput = styled(TextField)`
   ${({ theme }) => `
   && .MuiInputLabel-shrink {
     color: ${colors.gray};

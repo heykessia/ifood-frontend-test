@@ -17,7 +17,7 @@ const SelectInput = ({ id, name, values, action, selected }) => {
           })
         }
       >
-        <SelectOption value={NONE}>{NONE}</SelectOption>;
+        <SelectOption value="">-</SelectOption>;
         {values &&
           values.map((option) => (
             <SelectOption key={option.value} value={option.value}>

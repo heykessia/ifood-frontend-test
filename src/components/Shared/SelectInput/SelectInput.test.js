@@ -9,7 +9,6 @@ describe('Select Input component', () => {
       id: 'test-option',
       values: [{ name: 'Option 1', value: 'option-1' }],
     };
-
     const action = jest.fn();
 
     const { getByLabelText, getByText } = render(
@@ -18,13 +17,11 @@ describe('Select Input component', () => {
         name={filter.name}
         values={filter.values}
         action={action}
-        selected="none"
+        selected=""
       />
     );
-    const labelElement = getByLabelText(filter.name);
-    const selectElement = getByText('none');
 
+    const labelElement = getByLabelText(filter.name);
     expect(labelElement).toBeInTheDocument();
-    expect(selectElement).toBeInTheDocument();
   });
 });

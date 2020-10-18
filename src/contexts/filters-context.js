@@ -8,8 +8,8 @@ export const FiltersContext = createContext({});
 const initialState = {
   filters: [],
   activeFilters: {
-    locale: NONE,
-    country: NONE,
+    locale: '',
+    country: '',
     timestamp: '',
     limit: '',
     offset: '',
