@@ -51,7 +51,7 @@ export const filterParams = (activeFilters) => {
   const params = {};
 
   Object.keys(activeFilters).forEach((filter) => {
-    if (activeFilters[filter] !== NONE) {
+    if (activeFilters[filter] && activeFilters[filter] !== NONE) {
       params[filter] = activeFilters[filter];
     }
   });
@@ -63,7 +63,7 @@ export const fetchPlaylists = async (auth, dispatch, activeFilters) => {
   try {
     dispatch({ type: 'ERROR', payload: false });
     dispatch({ type: 'LOADING', payload: true });
-    console.log('entrou no fetchPlaylists');
+
     const params = filterParams(activeFilters);
     const response = await getPlaylists(auth, params);
 

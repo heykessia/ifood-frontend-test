@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SelectInput from '../Shared/SelectInput/SelectInput';
+import NumberInput from '../Shared/NumberInput/NumberInput';
 
 const Filter = ({ filter, action, selected }) => {
   const inputTypes = {
     locale: SelectInput,
     country: SelectInput,
     // timeStamp: DatePickerInput,
-    // limit: NumberInput,
-    // offset: NumberInput,
+    limit: NumberInput,
+    offset: NumberInput,
   };
 
   const FilterInput = inputTypes[filter.id] || 'div';
