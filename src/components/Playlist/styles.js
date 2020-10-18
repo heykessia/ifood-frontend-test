@@ -5,6 +5,7 @@ import {
   Grid as MUGrid,
   Card as MUCard,
   CardMedia as MUCardMedia,
+  CardActionArea as MUCardActionArea,
 } from '@material-ui/core';
 
 export const Navbar = styled(AppBar).attrs({
@@ -15,16 +16,14 @@ export const Navbar = styled(AppBar).attrs({
     background-color: ${theme.pallete.primary};
   `}
 `;
-
 export const Name = styled(Typography)``;
-
 export const Grid = styled(MUGrid)``;
-
 export const Card = styled(MUCard)`
   height: 100%;
   display: flex;
   flex-direction: column;
 `;
+export const CardActionArea = styled(MUCardActionArea)``;
 export const CardMedia = styled(MUCardMedia)`
   padding-top: 100%;
 `;
