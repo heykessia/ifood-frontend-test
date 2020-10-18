@@ -8,7 +8,7 @@ import Loading from '../../components/Loading/Loading';
 import Message from '../../components/Message/Message';
 import Playlist from '../../components/Playlist/Playlist';
 import SearchInput from '../../components/Shared/SearchInput/SearchInput';
-import { Grid, Container } from './styles';
+import { Grid, Container, Title } from './styles';
 
 const Playlists = (reload, search) => {
   const { state } = useContext(PlaylistsContext);
@@ -24,6 +24,7 @@ const Playlists = (reload, search) => {
   return (
     <>
       <Container maxWidth="sm">
+        <Title>Search</Title>
         <SearchInput
           placeholder="Search a playlist by name..."
           action={updateSearchTerm}
@@ -33,11 +34,13 @@ const Playlists = (reload, search) => {
       {state.loading ? (
         <Loading />
       ) : state.error ? (
-        <Message
-          text="Sorry, an error occured while getting the playlists from Spotify."
-          action={retry}
-          actionLabel="Try again"
-        />
+        <Container>
+          <Message
+            text="Sorry, an error occured while getting the playlists from Spotify."
+            action={retry}
+            actionLabel="Try again"
+          />
+        </Container>
       ) : (
         <Container>
           <Grid container spacing={4}>

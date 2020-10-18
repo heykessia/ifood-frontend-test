@@ -8,7 +8,6 @@ export const TextInput = styled(MUInput)`
     &&:after {
       border-bottom: 2px solid ${colors.darkerGray};
     }
-    margin-bottom: 32px;
   `}
 `;
 

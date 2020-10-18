@@ -2,8 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FiltersContext, fetchFilters } from '../../contexts/filters-context';
 import Filter from '../Filter/Filter';
-import { Paper, Container } from './styles';
 import Loading from '../Loading/Loading';
+import { Container, Grid, Title } from './styles';
 
 const Filters = () => {
   const { state, dispatch } = useContext(FiltersContext);
@@ -21,23 +21,27 @@ const Filters = () => {
   }, [dispatch]);
 
   return (
-    <Paper>
-      <Container>
-        {state.loading ? (
-          <Loading />
-        ) : (
-          state.filters.length > 0 &&
-          state.filters.map((filter) => (
-            <Filter
-              key={filter.id}
-              filter={filter}
-              action={updateFilters}
-              selected={selectedFilter(filter.id)}
-            />
-          ))
-        )}
-      </Container>
-    </Paper>
+    <Container>
+      {state.loading ? (
+        <Loading />
+      ) : (
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Title>Filters</Title>
+          </Grid>
+          {state.filters.length > 0 &&
+            state.filters.map((filter) => (
+              <Grid item xs={12} sm={6} md={4} key={filter.id}>
+                <Filter
+                  filter={filter}
+                  action={updateFilters}
+                  selected={selectedFilter(filter.id)}
+                />
+              </Grid>
+            ))}
+        </Grid>
+      )}
+    </Container>
   );
 };
 

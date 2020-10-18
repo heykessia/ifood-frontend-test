@@ -24,7 +24,6 @@ export const Label = styled(InputLabel)`
 `;
 export const FormContainer = styled(FormControl)`
   ${({ theme }) => `
-    margin: ${theme.spacing(2)}px;
-    min-width: 45%;
+    min-width: 100%;
   `}
 `;

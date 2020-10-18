@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import { getPlaylists } from '../services/spotify';
-import { NONE } from '../utils/constants/constants';
+import { filterParams } from '../utils/paramsParser';
 
 export const PlaylistsContext = createContext({});
 
@@ -45,18 +45,6 @@ export const PlaylistsProvider = ({ children }) => {
 
 PlaylistsProvider.propTypes = {
   children: PropTypes.node,
-};
-
-export const filterParams = (activeFilters) => {
-  const params = {};
-
-  Object.keys(activeFilters).forEach((filter) => {
-    if (activeFilters[filter] && activeFilters[filter] !== NONE) {
-      params[filter] = activeFilters[filter];
-    }
-  });
-
-  return params;
 };
 
 export const fetchPlaylists = async (auth, dispatch, activeFilters) => {

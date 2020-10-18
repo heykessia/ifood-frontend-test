@@ -10,7 +10,7 @@ const initialState = {
   activeFilters: {
     locale: NONE,
     country: NONE,
-    timestamp: null,
+    timestamp: '',
     limit: '',
     offset: '',
   },

@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SelectInput from '../Shared/SelectInput/SelectInput';
 import NumberInput from '../Shared/NumberInput/NumberInput';
+import DateInput from '../Shared/DateInput/DateInput';
 
 const Filter = ({ filter, action, selected }) => {
   const inputTypes = {
     locale: SelectInput,
     country: SelectInput,
-    // timeStamp: DatePickerInput,
+    timestamp: DateInput,
     limit: NumberInput,
     offset: NumberInput,
   };
