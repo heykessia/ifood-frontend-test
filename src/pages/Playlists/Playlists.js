@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
   PlaylistsContext,
@@ -50,8 +50,8 @@ const Playlists = () => {
           actionLabel="Try again"
         />
       ) : (
-        <Container maxWidth="md">
-          <Container>
+        <Container>
+          <Container maxWidth="sm">
             <SearchInput
               placeholder="Search a playlist by name..."
               action={updateSearchTerm}

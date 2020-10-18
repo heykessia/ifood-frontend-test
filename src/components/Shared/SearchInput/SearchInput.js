@@ -15,7 +15,7 @@ const SearchInput = ({ action, placeholder, value }) => {
           <Search />
         </IconContainer>
       }
-    ></TextInput>
+    />
   );
 };
 
