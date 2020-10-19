@@ -3,12 +3,18 @@ import PropTypes from 'prop-types';
 import { render } from '@testing-library/react';
 import { StylesProvider } from '@material-ui/core/styles';
 import { ThemeProvider } from 'styled-components';
+import { PlaylistsProvider } from '../../contexts/playlists-context';
+import { FiltersProvider } from '../../contexts/filters-context';
 import { theme } from '../../assets/theme/theme';
 
 const AllTheProviders = ({ children }) => {
   return (
     <StylesProvider injectFirst>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <FiltersProvider>
+          <PlaylistsProvider>{children}</PlaylistsProvider>
+        </FiltersProvider>
+      </ThemeProvider>
     </StylesProvider>
   );
 };
