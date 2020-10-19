@@ -1,7 +1,7 @@
-import axios from 'axios';
+import client from './client';
 
 const { REACT_APP_FILTERS_URL } = process.env;
 
 export const getFilters = () => {
-  return axios.get(REACT_APP_FILTERS_URL);
+  return client.get(REACT_APP_FILTERS_URL);
 };
