@@ -7,7 +7,9 @@ const NumberInput = ({ id, name, action, selected }) => {
     <FormContainer>
       <DatePicker
         type="date"
-        value={selected}
+        InputLabelProps={{
+          shrink: true,
+        }}
         label={name}
         onChange={(params) =>
           action({
