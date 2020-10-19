@@ -24,7 +24,7 @@ function reducer(state = initialState, action) {
       return { ...state, loading: payload };
     }
     case 'UPDATE_FILTERS': {
-      return { ...state, filters: payload.filters };
+      return { ...state, filters: payload };
     }
     case 'ERROR': {
       return { ...state, error: payload };
@@ -48,7 +48,9 @@ export const FiltersProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <FiltersContext.Provider value={{ state, dispatch }}>
+    <FiltersContext.Provider
+      value={{ filterState: state, filterDispatch: dispatch }}
+    >
       {children}
     </FiltersContext.Provider>
   );
@@ -67,7 +69,7 @@ export const fetchFilters = async (dispatch) => {
 
     dispatch({
       type: 'UPDATE_FILTERS',
-      payload: response.data,
+      payload: response.data.filters,
     });
   } catch (error) {
     dispatch({ type: 'ERROR', payload: true });

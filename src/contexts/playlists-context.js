@@ -37,7 +37,9 @@ export const PlaylistsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <PlaylistsContext.Provider value={{ state, dispatch }}>
+    <PlaylistsContext.Provider
+      value={{ playlistState: state, playlistDispatch: dispatch }}
+    >
       {children}
     </PlaylistsContext.Provider>
   );

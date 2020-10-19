@@ -1,58 +1,23 @@
-import React, { useContext } from 'react';
-import {
-  PlaylistsContext,
-  searchPlaylists,
-} from '../../contexts/playlists-context';
-
-import Loading from '../../components/Loading/Loading';
-import Message from '../../components/Message/Message';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Playlist from '../../components/Playlist/Playlist';
-import SearchInput from '../../components/Shared/SearchInput/SearchInput';
-import { Grid, Container, Title } from './styles';
+import { Grid, Container } from './styles';
 
-const Playlists = (reload, search) => {
-  const { state } = useContext(PlaylistsContext);
-
-  const retry = () => {
-    return reload();
-  };
-
-  const updateSearchTerm = (event) => {
-    search(event.target.value);
-  };
-
+const Playlists = ({ playlists }) => {
   return (
-    <>
-      <Container maxWidth="sm">
-        <Title>Search</Title>
-        <SearchInput
-          placeholder="Search a playlist by name..."
-          action={updateSearchTerm}
-          value={state.search}
-        />
-      </Container>
-      {state.loading ? (
-        <Loading />
-      ) : state.error ? (
-        <Container>
-          <Message
-            text="Sorry, an error occured while getting the playlists from Spotify."
-            action={retry}
-            actionLabel="Try again"
-          />
-        </Container>
-      ) : (
-        <Container>
-          <Grid container spacing={4}>
-            {state.playlists &&
-              searchPlaylists(state.playlists, state.search).map((playlist) => (
-                <Playlist playlist={playlist} key={playlist.id} />
-              ))}
-          </Grid>
-        </Container>
-      )}
-    </>
+    <Container>
+      <Grid container spacing={4}>
+        {playlists.length > 0 &&
+          playlists.map((playlist) => (
+            <Playlist playlist={playlist} key={playlist.id} />
+          ))}
+      </Grid>
+    </Container>
   );
+};
+
+Playlists.propTypes = {
+  playlists: PropTypes.array.isRequired,
 };
 
 export default Playlists;
