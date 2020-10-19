@@ -24,9 +24,9 @@ const PlaylistsPage = () => {
   const { auth } = useAuth();
   const history = useHistory();
 
-  const load = async () => {
+  const load = () => {
     if (!validAuth(auth)) return history.push('/login');
-    fetchPlaylists(auth, playlistState, filterState.activeFilters);
+    fetchPlaylists(auth, playlistDispatch, filterState.activeFilters);
   };
 
   const updateSearchTerm = (event) => {
