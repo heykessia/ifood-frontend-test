@@ -9,20 +9,22 @@ const Playlist = ({ playlist }) => {
 
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <Card>
-        <CardActionArea onClick={listen}>
-          <CardMedia
-            image={playlist.images[0].url}
-            data-testid={playlist.name}
-          />
-        </CardActionArea>
-      </Card>
+      {playlist && (
+        <Card data-testid="card-container">
+          <CardActionArea onClick={listen}>
+            <CardMedia
+              image={playlist.images[0].url}
+              data-testid={playlist.name}
+            />
+          </CardActionArea>
+        </Card>
+      )}
     </Grid>
   );
 };
 
 Playlist.propTypes = {
-  playlist: PropTypes.object.isRequired,
+  playlist: PropTypes.object,
 };
 
 export default Playlist;

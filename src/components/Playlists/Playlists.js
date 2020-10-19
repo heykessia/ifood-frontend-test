@@ -7,7 +7,7 @@ const Playlists = ({ playlists }) => {
   return (
     <Container>
       <Grid container spacing={4}>
-        {playlists.length > 0 &&
+        {playlists &&
           playlists.map((playlist) => (
             <Playlist playlist={playlist} key={playlist.id} />
           ))}
@@ -17,7 +17,7 @@ const Playlists = ({ playlists }) => {
 };
 
 Playlists.propTypes = {
-  playlists: PropTypes.array.isRequired,
+  playlists: PropTypes.array,
 };
 
 export default Playlists;

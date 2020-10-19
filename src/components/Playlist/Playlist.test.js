@@ -1,5 +1,9 @@
 import React from 'react';
-import { render } from '../../utils/test-utils/theme-provider-util';
+import {
+  render,
+  fireEvent,
+  waitFor,
+} from '../../utils/test-utils/theme-provider-util';
 import Playlist from './Playlist';
 
 import { playlistMock } from '../../utils/test-utils/mocks/playlist-mock';
@@ -10,5 +14,20 @@ describe('Playlist component', () => {
     const imageElement = getByTestId(playlistMock.name);
 
     expect(imageElement).toBeInTheDocument();
+  });
+
+  test('does not render without playlist', async () => {
+    const { queryByTestId } = render(<Playlist />);
+
+    expect(queryByTestId('card-container')).not.toBeInTheDocument();
+  });
+
+  test('renders with playlist', () => {
+    global.open = jest.fn();
+    const { getByTestId } = render(<Playlist playlist={playlistMock} />);
+    const imageElement = getByTestId(playlistMock.name);
+
+    fireEvent.click(imageElement);
+    expect(global.open).toHaveBeenCalled();
   });
 });
