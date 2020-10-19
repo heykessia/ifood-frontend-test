@@ -17,7 +17,6 @@ jest.mock('../../services/filters');
 describe('Playlist component', () => {
   test('renders with playlists', async () => {
     getPlaylists.mockResolvedValue(responseMock);
-
     getFilters.mockResolvedValue(filtersMock);
 
     const playlists = responseMock.data.playlists.items;

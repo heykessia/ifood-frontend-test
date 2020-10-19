@@ -22,7 +22,7 @@ describe('Playlist component', () => {
     expect(queryByTestId('card-container')).not.toBeInTheDocument();
   });
 
-  test('renders with playlist', () => {
+  test('should go to spotify playlist', () => {
     global.open = jest.fn();
     const { getByTestId } = render(<Playlist playlist={playlistMock} />);
     const imageElement = getByTestId(playlistMock.name);
