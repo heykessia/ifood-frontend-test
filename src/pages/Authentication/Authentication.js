@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useAuth } from '../../contexts/auth-context';
 import { parseAuthParams, validAuth } from '../../utils/paramsParser';
+import { login } from '../../services/auth';
 
 import Layout from '../../components/Layout/Layout';
 import Loading from '../../components/Loading/Loading';
 
 const Authentication = () => {
-  const { auth, setAuth } = useAuth();
   const history = useHistory();
 
   useEffect(() => {
@@ -15,9 +14,9 @@ const Authentication = () => {
 
     if (!validAuth(authParams)) return history.push('/login');
 
-    setAuth(authParams);
+    login(authParams);
     history.push('/');
-  }, [auth, history, setAuth]);
+  }, [history]);
 
   return (
     <Layout>

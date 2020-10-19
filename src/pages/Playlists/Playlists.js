@@ -1,13 +1,10 @@
 import React, { useEffect, useContext } from 'react';
-import { useHistory } from 'react-router-dom';
-import { useAuth } from '../../contexts/auth-context';
 import {
   PlaylistsContext,
   fetchPlaylists,
   searchPlaylists,
 } from '../../contexts/playlists-context';
 import { FiltersContext, fetchFilters } from '../../contexts/filters-context';
-import { validAuth } from '../../utils/paramsParser';
 
 import Layout from '../../components/Layout/Layout';
 import Playlists from '../../components/Playlists/Playlists';
@@ -21,12 +18,9 @@ import { Container, Title } from './styles';
 const PlaylistsPage = () => {
   const { playlistState, playlistDispatch } = useContext(PlaylistsContext);
   const { filterState, filterDispatch } = useContext(FiltersContext);
-  const { auth } = useAuth();
-  const history = useHistory();
 
   const load = () => {
-    if (!validAuth(auth)) return history.push('/login');
-    fetchPlaylists(auth, playlistDispatch, filterState.activeFilters);
+    fetchPlaylists(playlistDispatch, filterState.activeFilters);
   };
 
   const updateSearchTerm = (event) => {
@@ -44,19 +38,13 @@ const PlaylistsPage = () => {
   };
 
   useEffect(() => {
-    if (!validAuth(auth)) return history.push('/login');
-  }, [auth, history]);
-
-  useEffect(() => {
-    fetchPlaylists(auth, playlistDispatch, filterState.activeFilters);
-
     const interval = setInterval(
-      fetchPlaylists(auth, playlistDispatch, filterState.activeFilters),
+      fetchPlaylists(playlistDispatch, filterState.activeFilters),
       30000
     );
 
     return () => clearInterval(interval);
-  }, [auth, playlistDispatch, filterState.activeFilters]);
+  }, [playlistDispatch, filterState.activeFilters]);
 
   useEffect(() => {
     fetchFilters(filterDispatch);

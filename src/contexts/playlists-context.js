@@ -49,13 +49,13 @@ PlaylistsProvider.propTypes = {
   children: PropTypes.node,
 };
 
-export const fetchPlaylists = async (auth, dispatch, activeFilters) => {
+export const fetchPlaylists = async (dispatch, activeFilters) => {
   try {
     dispatch({ type: 'ERROR', payload: false });
     dispatch({ type: 'LOADING', payload: true });
 
     const params = filterParams(activeFilters);
-    const response = await getPlaylists(auth, params);
+    const response = await getPlaylists(params);
 
     dispatch({
       type: 'UPDATE_PLAYLISTS',
