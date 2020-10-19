@@ -2,16 +2,17 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { loginURL } from '../../services/spotify';
 import { useAuth } from '../../contexts/auth-context';
+import { validAuth } from '../../utils/paramsParser';
 
 import Layout from '../../components/Layout/Layout';
 import Loading from '../../components/Loading/Loading';
 import Message from '../../components/Message/Message';
 
 const Login = () => {
-  const { isAuthenticated, loading, setLoading } = useAuth();
+  const { auth, loading, setLoading } = useAuth();
   const history = useHistory();
 
-  if (isAuthenticated) history.push('/');
+  if (validAuth(auth)) history.push('/');
 
   const handleLogin = () => {
     setLoading(true);
