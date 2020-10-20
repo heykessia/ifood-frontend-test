@@ -13,7 +13,11 @@ describe('Login page', () => {
 
   test('goes to spotify login', async () => {
     delete window.location;
-    window.location = {};
+    window.location = {
+      port: '300',
+      protocol: 'http:',
+      hostname: 'spotify.com',
+    };
     const { getByText, getByTestId } = render(<LoginPage />);
     const buttonElement = getByText('Login');
 
