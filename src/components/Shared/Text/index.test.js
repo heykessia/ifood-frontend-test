@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '../../../utils/test-utils/theme-provider-util';
-import Text from './Text';
+import Text from './index';
 
 describe('Text component', () => {
   test('renders message', () => {

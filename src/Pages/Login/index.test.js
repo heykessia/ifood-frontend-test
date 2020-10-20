@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '../../utils/test-utils/theme-provider-util';
-import LoginPage from './Login';
+import LoginPage from './index';
 
 describe('Login page', () => {
   test('renders page', () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Button from '../Shared/Button/Button';
-import Text from '../Shared/Text/Text';
+import Button from '../Shared/Button';
+import Text from '../Shared/Text';
 import { Container } from './styles';
 
 const Message = ({ text, action, actionLabel }) => {

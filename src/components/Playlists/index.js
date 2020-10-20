@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Playlist from '../../components/Playlist/Playlist';
+import Playlist from '../../components/Playlist';
 import { Grid, Container } from './styles';
 
 const Playlists = ({ playlists }) => {

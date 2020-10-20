@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '../../utils/test-utils/theme-provider-util';
-import Header from './Header';
+import Header from './index';
 
 describe('Header component', () => {
   test('renders title', () => {

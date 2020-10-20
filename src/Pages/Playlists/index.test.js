@@ -5,7 +5,7 @@ import {
   waitForElement,
   waitForElementToBeRemoved,
 } from '../../utils/test-utils/theme-provider-util';
-import PlaylistsPage from './Playlists';
+import PlaylistsPage from './index';
 
 import { getPlaylists } from '../../services/spotify';
 import { getFilters } from '../../services/filters';

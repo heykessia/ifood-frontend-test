@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SelectInput from '../Shared/SelectInput/SelectInput';
-import NumberInput from '../Shared/NumberInput/NumberInput';
-import DateInput from '../Shared/DateInput/DateInput';
+import SelectInput from '../Shared/SelectInput';
+import NumberInput from '../Shared/NumberInput';
+import DateInput from '../Shared/DateInput';
 
 const Filter = ({ filter, action, selected }) => {
   const inputTypes = {

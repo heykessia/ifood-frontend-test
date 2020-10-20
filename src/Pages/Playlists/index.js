@@ -6,12 +6,12 @@ import {
 } from '../../contexts/playlists-context';
 import { FiltersContext, fetchFilters } from '../../contexts/filters-context';
 
-import Layout from '../../components/Layout/Layout';
-import Playlists from '../../components/Playlists/Playlists';
-import Filters from '../../components/Filters/Filters';
-import Loading from '../../components/Loading/Loading';
-import Message from '../../components/Message/Message';
-import SearchInput from '../../components/Shared/SearchInput/SearchInput';
+import Layout from '../../components/Layout';
+import Playlists from '../../components/Playlists/';
+import Filters from '../../components/Filters';
+import Loading from '../../components/Loading';
+import Message from '../../components/Message';
+import SearchInput from '../../components/Shared/SearchInput';
 
 import { Container, Title } from './styles';
 

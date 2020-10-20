@@ -3,7 +3,7 @@ import {
   render,
   fireEvent,
 } from '../../../utils/test-utils/theme-provider-util';
-import SearchInput from './SearchInput';
+import SearchInput from './index';
 
 describe('Input component', () => {
   test('renders input', () => {

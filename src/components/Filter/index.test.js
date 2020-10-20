@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '../../utils/test-utils/theme-provider-util';
-import Filter from './Filter';
+import Filter from './index';
 
 describe('Filter component', () => {
   test('renders Filter', () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import Layout from '../../components/Layout/Layout';
-import Message from '../../components/Message/Message';
+import Layout from '../../components/Layout';
+import Message from '../../components/Message';
 
 const ErrorPage = () => {
   const history = useHistory();

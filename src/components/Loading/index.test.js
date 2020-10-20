@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '../../utils/test-utils/theme-provider-util';
-import Loading from './Loading';
+import Loading from './index';
 
 describe('Loading component', () => {
   test('renders loading', () => {

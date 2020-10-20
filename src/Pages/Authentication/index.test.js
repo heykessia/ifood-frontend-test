@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
 import { render } from '../../utils/test-utils/theme-provider-util';
-import Authentication from './Authentication';
+import Authentication from './index';
 
 describe('Authentication page', () => {
   test('renders page', () => {

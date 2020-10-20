@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '../../../utils/test-utils/theme-provider-util';
-import SelectInput from './SelectInput';
+import SelectInput from './index';
 
 describe('Select Input component', () => {
   test('renders select', () => {

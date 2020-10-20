@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '../../utils/test-utils/theme-provider-util';
-import Playlist from './Playlist';
+import Playlist from './index';
 
 import { playlistMock } from '../../utils/test-utils/mocks/playlist-mock';
 

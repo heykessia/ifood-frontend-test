@@ -3,7 +3,7 @@ import {
   render,
   fireEvent,
 } from '../../../utils/test-utils/theme-provider-util';
-import Button from './Button';
+import Button from './index';
 
 describe('Button component', () => {
   test('renders button', () => {

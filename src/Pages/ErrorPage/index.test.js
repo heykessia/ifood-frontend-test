@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
 import { render, fireEvent } from '../../utils/test-utils/theme-provider-util';
-import ErrorPage from './ErrorPage';
+import ErrorPage from './index';
 
 describe('Error Page', () => {
   test('renders page', () => {

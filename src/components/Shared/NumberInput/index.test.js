@@ -1,20 +1,22 @@
 import React from 'react';
 import { render } from '../../../utils/test-utils/theme-provider-util';
-import DateInput from './DateInput';
+import NumberInput from './index';
 
-describe('Date Input component', () => {
+describe('Number Input component', () => {
   test('renders input', () => {
     const filter = {
       name: 'Test Option',
       id: 'test-option',
+      validation: { min: 1, max: 10 },
     };
 
     const action = jest.fn();
 
     const { getByText } = render(
-      <DateInput
+      <NumberInput
         id={filter.id}
         name={filter.name}
+        validation={filter.validation}
         action={action}
         selected=""
       />

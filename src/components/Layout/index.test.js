@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '../../utils/test-utils/theme-provider-util';
-import Layout from './Layout';
+import Layout from './index';
 
 describe('Layout component', () => {
   test('renders layout', () => {

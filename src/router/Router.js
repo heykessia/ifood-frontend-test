@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-import PlaylistsPage from '../Pages/Playlists/Playlists';
-import Login from '../Pages/Login/Login';
-import ErrorPage from '../Pages/ErrorPage/ErrorPage';
-import Authentication from '../Pages/Authentication/Authentication';
+import PlaylistsPage from '../Pages/Playlists';
+import Login from '../Pages/Login';
+import ErrorPage from '../Pages/ErrorPage';
+import Authentication from '../Pages/Authentication';
 
 import { isAuthenticated } from '../services/auth';
 

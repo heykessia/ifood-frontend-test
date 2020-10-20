@@ -3,8 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { parseAuthParams, validAuth } from '../../utils/paramsParser';
 import { login } from '../../services/auth';
 
-import Layout from '../../components/Layout/Layout';
-import Loading from '../../components/Loading/Loading';
+import Layout from '../../components/Layout';
+import Loading from '../../components/Loading';
 
 const Authentication = () => {
   const history = useHistory();

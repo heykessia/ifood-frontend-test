@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '../../utils/test-utils/theme-provider-util';
-import Message from './Message';
+import Message from './index';
 
 describe('Message component', () => {
   test('renders message elements', () => {

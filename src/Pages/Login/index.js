@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { loginURL } from '../../services/spotify';
 
-import Layout from '../../components/Layout/Layout';
-import Loading from '../../components/Loading/Loading';
-import Message from '../../components/Message/Message';
+import Layout from '../../components/Layout';
+import Loading from '../../components/Loading';
+import Message from '../../components/Message';
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
