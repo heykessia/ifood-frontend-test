@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  render,
-  fireEvent,
-  waitFor,
-} from '../../utils/test-utils/theme-provider-util';
+import { render, fireEvent } from '../../utils/test-utils/theme-provider-util';
 import Playlist from './Playlist';
 
 import { playlistMock } from '../../utils/test-utils/mocks/playlist-mock';
