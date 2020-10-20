@@ -38,10 +38,11 @@ const PlaylistsPage = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(
-      fetchPlaylists(playlistDispatch, filterState.activeFilters),
-      30000
-    );
+    const loadPlaylists = () => {
+      fetchPlaylists(playlistDispatch, filterState.activeFilters);
+    };
+
+    const interval = setInterval(loadPlaylists(), 30000);
 
     return () => clearInterval(interval);
   }, [playlistDispatch, filterState.activeFilters]);
