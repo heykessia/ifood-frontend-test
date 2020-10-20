@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import PlaylistsPage from '../Pages/Playlists/Playlists';
@@ -20,6 +21,10 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
     }
   />
 );
+
+PrivateRoute.propTypes = {
+  component: PropTypes.func,
+};
 
 const Router = () => (
   <BrowserRouter>
